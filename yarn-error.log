@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js build
+  /usr/bin/node /usr/share/yarn/bin/yarn.js start:dev
 
 PATH: 
-  /home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /mnt/BEF62AD6F62A8F29/Coding/typescript/[Pluralsight] 01 TypeScript- The Big Picture/moataz/node_modules/.bin:/tmp/yarn--1594823209030-0.8156840813112631:/mnt/BEF62AD6F62A8F29/Coding/typescript/[Pluralsight] 01 TypeScript- The Big Picture/moataz/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.21.1
@@ -14,12 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /mnt/BEF62AD6F62A8F29/Coding/typescript/[Pluralsight] 01 TypeScript- The Big Picture/moataz/package.json: Unexpected token } in JSON at position 214
-      at JSON.parse (<anonymous>)
-      at /usr/share/yarn/lib/cli.js:1625:59
+  Error: EIO: i/o error, write
+      at writeSync (fs.js:618:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+      at doWrite (_stream_writable.js:454:12)
+      at writeOrBuffer (_stream_writable.js:436:5)
+      at SyncWriteStream.Writable.write (_stream_writable.js:327:11)
+      at ConsoleReporter._log (/usr/share/yarn/lib/cli.js:96691:17)
+      at ConsoleReporter.log (/usr/share/yarn/lib/cli.js:96679:10)
+      at ConsoleReporter.command (/usr/share/yarn/lib/cli.js:96708:10)
+      at /usr/share/yarn/lib/cli.js:34545:16
       at Generator.next (<anonymous>)
-      at step (/usr/share/yarn/lib/cli.js:310:30)
-      at /usr/share/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -28,9 +33,10 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "watch": "yarn tsc-watch index.ts",
-      "start": "node index",
-      "build": "tsc -p tsconfig-build.json",
+      "start": "node build/index",
+      "build": "tsc",
+      "start:dev": "yarn build && yarn start",
+      "watch": "nodemon -e ts,json --exec yarn start:dev"
     },
     "author": "",
     "license": "ISC",
@@ -39,6 +45,9 @@ npm manifest:
       "ts-node": "^8.10.2",
       "tsc-watch": "^4.2.9",
       "typescript": "^3.9.6"
+    },
+    "nodemonConfig": {
+      "delay": "500"
     }
   }
 

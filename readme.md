@@ -2,7 +2,8 @@
 
 ## Notes
 
-<!--
+```
 tsc --init
 
--->
+- whey TS?
+```
