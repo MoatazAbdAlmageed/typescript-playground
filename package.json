@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "yarn tsc-watch index.ts",
-    "start": "node index"
+    "start": "node build/index",
+    "build": "tsc",
+    "start:dev": "yarn build && yarn start",
+    "watch": "nodemon -e ts,json --exec yarn start:dev"
   },
   "author": "",
   "license": "ISC",
