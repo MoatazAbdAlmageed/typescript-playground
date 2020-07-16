@@ -1,3 +1,4 @@
+import Car from "./Car/Car";
 import Customer from "./Customer/Customer";
 
 let customer = new Customer("Moataz", 29, "PHP web developer", "camelCase");
@@ -8,3 +9,7 @@ customer.setAge(30);
 customer.setCompany("wuilt");
 customer.setPosition("MERN developer");
 console.log(customer.hello());
+
+const car = new Car("BMW");
+car.start();
+car.stop();

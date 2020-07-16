@@ -2,29 +2,24 @@ Arguments:
   /usr/bin/node /usr/share/yarn/bin/yarn.js start:dev
 
 PATH: 
-  /mnt/BEF62AD6F62A8F29/Coding/typescript/[Pluralsight] 01 TypeScript- The Big Picture/moataz/node_modules/.bin:/tmp/yarn--1594823209030-0.8156840813112631:/mnt/BEF62AD6F62A8F29/Coding/typescript/[Pluralsight] 01 TypeScript- The Big Picture/moataz/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /opt/lampp/htdocs/playground/typescript/node_modules/.bin:/tmp/yarn--1594893977379-0.24924400789074386:/opt/lampp/htdocs/playground/typescript/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.21.1
 
 Node version: 
-  13.10.1
+  13.14.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: EIO: i/o error, write
-      at writeSync (fs.js:618:3)
-      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
-      at doWrite (_stream_writable.js:454:12)
-      at writeOrBuffer (_stream_writable.js:436:5)
-      at SyncWriteStream.Writable.write (_stream_writable.js:327:11)
-      at ConsoleReporter._log (/usr/share/yarn/lib/cli.js:96691:17)
-      at ConsoleReporter.log (/usr/share/yarn/lib/cli.js:96679:10)
-      at ConsoleReporter.command (/usr/share/yarn/lib/cli.js:96708:10)
-      at /usr/share/yarn/lib/cli.js:34545:16
+  SyntaxError: /opt/lampp/htdocs/playground/typescript/package.json: Unexpected string in JSON at position 151
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -33,6 +28,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
+      "minify": "jsmin -o name.min.js name.js"
       "start": "node build/index",
       "build": "tsc",
       "start:dev": "yarn build && yarn start",
@@ -41,6 +37,7 @@ npm manifest:
     "author": "",
     "license": "ISC",
     "devDependencies": {
+      "jsmin": "^1.0.1",
       "nodemon": "^2.0.4",
       "ts-node": "^8.10.2",
       "tsc-watch": "^4.2.9",
@@ -537,6 +534,11 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
     integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+  
+  jsmin@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/jsmin/-/jsmin-1.0.1.tgz#e7bd0dcd6496c3bf4863235bf461a3d98aa3b98c"
+    integrity sha1-570NzWSWw79IYyNb9GGj2YqjuYw=
   
   json-buffer@3.0.0:
     version "3.0.0"
