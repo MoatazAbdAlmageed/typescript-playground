@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "minify": "jsmin -o build/index.min.js build/index.js",
-    "start": "node build/index.min",
+    "minify-all": "minify-all build ",
+    "start": "node build/index",
     "build": "yarn minify && tsc",
     "start:dev": "yarn build && yarn start",
     "watch": "nodemon -e ts,json --exec yarn start:dev"
@@ -21,5 +22,8 @@
   },
   "nodemonConfig": {
     "delay": "500"
+  },
+  "dependencies": {
+    "minify-all": "^1.2.2"
   }
 }

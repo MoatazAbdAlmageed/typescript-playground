@@ -1,16 +1,27 @@
-import ICustomer from "./ICustomer";
+import IDeveloper from "./IDeveloper";
 
-class Customer implements ICustomer {
+class Developer implements IDeveloper {
   name: string;
   age: number;
   position: string;
   company: string;
+  // greeting: (msg: string) => string;
+  skills: string[];
 
-  constructor(name: string, age: number, position: string, company: string) {
+  constructor(
+    name: string,
+    age: number,
+    position: string,
+    company: string,
+    // greeting: (msg: string) => string,
+    skills: string[]
+  ) {
     this.name = name;
     this.age = age;
     this.position = position;
     this.company = company;
+    // this.greeting = (greeting) => `${greeting} ${this.name}`;
+    this.skills = skills;
   }
   getName() {
     return `Hello my name is  ${this.name}`;
@@ -45,7 +56,8 @@ class Customer implements ICustomer {
   }
 
   hello(): string {
-    return ` ${this.getName()}
+    return ` 
+    ${this.getName()}
     ${this.getAge()}
     ${this.getCompany()}
     ${this.getPosition()}
@@ -53,4 +65,4 @@ class Customer implements ICustomer {
   }
 }
 
-export default Customer;
+export default Developer;

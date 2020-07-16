@@ -1,7 +1,8 @@
-interface ICustomer {
+interface IDeveloper {
   name: string;
   age: number;
   position: string;
   company: string;
+  skills: string[];
 }
-export default ICustomer;
+export default IDeveloper;
