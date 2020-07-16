@@ -1,10 +1,11 @@
+import Company from "./Company";
 import IDeveloper from "./IDeveloper";
 
 class Developer implements IDeveloper {
   name: string;
-  age: number;
+  private _age: number;
   position: string;
-  company: string;
+  company: Company;
   // greeting: (msg: string) => string;
   skills: string[];
 
@@ -12,12 +13,12 @@ class Developer implements IDeveloper {
     name: string,
     age: number,
     position: string,
-    company: string,
+    company: Company,
     // greeting: (msg: string) => string,
     skills: string[]
   ) {
     this.name = name;
-    this.age = age;
+    this._age = age;
     this.position = position;
     this.company = company;
     // this.greeting = (greeting) => `${greeting} ${this.name}`;
@@ -31,12 +32,13 @@ class Developer implements IDeveloper {
     this.name = name;
   }
 
-  getAge() {
-    return `I have ${this.age} years old `;
+  get age() {
+    // return `I have ${this._age} years old `;
+    return this._age;
   }
 
-  setAge(age: number) {
-    this.age = age;
+  set age(age: number) {
+    this._age = age;
   }
 
   getPosition() {
@@ -48,17 +50,18 @@ class Developer implements IDeveloper {
   }
 
   getCompany() {
-    return `I'm  working for ${this.company} company`;
+    const { name, location } = this.company;
+    return `I'm  working for ${name} company ,it's location is ${location}`;
   }
 
-  setCompany(company: string) {
+  setCompany(company: Company) {
     this.company = company;
   }
 
   hello(): string {
     return ` 
     ${this.getName()}
-    ${this.getAge()}
+    ${this.age}
     ${this.getCompany()}
     ${this.getPosition()}
     `;

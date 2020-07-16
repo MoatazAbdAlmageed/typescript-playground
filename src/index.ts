@@ -1,7 +1,7 @@
-import Car from "./Car/Car";
+import Company from "./Developer/Company";
 import Customer from "./Developer/Developer";
-
-let customer = new Customer("Moataz", 29, "PHP web developer", "camelCase", [
+let camelCase = new Company("camelCase", "Giza");
+let customer = new Customer("Moataz", 29, "PHP web developer", camelCase, [
   "HTML",
   "CSS",
   "JS",
@@ -11,13 +11,15 @@ let customer = new Customer("Moataz", 29, "PHP web developer", "camelCase", [
 console.log(customer.hello());
 
 // year ago (1/1/2020)
-customer.setAge(30);
-customer.setCompany("wuilt");
+customer.age = 30;
+let wuilt = new Company("wuilt", "6 October");
+
+customer.setCompany(wuilt);
 customer.setPosition("MERN developer");
 console.log(customer.hello());
 
-const car = new Car("BMW");
-car.start();
-car.stop();
-car.start();
-car.stop();
+// const car = new Car("BMW");
+// car.start();
+// car.stop();
+// car.start();
+// car.stop();
