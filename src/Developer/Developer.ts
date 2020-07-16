@@ -49,7 +49,7 @@ class Developer implements IDeveloper {
     this.position = position;
   }
 
-  getCompany() {
+  getCompany(): string {
     const { name, location } = this.company;
     return `I'm  working for ${name} company ,it's location is ${location}`;
   }

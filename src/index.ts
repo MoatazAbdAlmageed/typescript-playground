@@ -1,22 +1,33 @@
 import Company from "./Developer/Company";
-import Customer from "./Developer/Developer";
+import Developer from "./Developer/Developer";
 let camelCase = new Company("camelCase", "Giza");
-let customer = new Customer("Moataz", 29, "PHP web developer", camelCase, [
+let Moataz = new Developer("Moataz", 29, "PHP web developer", camelCase, [
   "HTML",
   "CSS",
   "JS",
   "NodeJS",
   "MongoDb",
 ]);
-console.log(customer.hello());
+console.log(Moataz.hello());
 
 // year ago (1/1/2020)
-customer.age = 30;
+Moataz.age = 30;
 let wuilt = new Company("wuilt", "6 October");
 
-customer.setCompany(wuilt);
-customer.setPosition("MERN developer");
-console.log(customer.hello());
+Moataz.setCompany(wuilt);
+Moataz.setPosition("MERN developer");
+console.log(Moataz.hello());
+
+let orchtech = new Company("orchtech", "Giza");
+
+const abdo = new Developer("Abdo", 29, "Mobile Developer", orchtech, [
+  "HTML",
+  "CSS",
+  "JS",
+  "Android",
+]);
+
+console.log(abdo.hello());
 
 // const car = new Car("BMW");
 // car.start();
