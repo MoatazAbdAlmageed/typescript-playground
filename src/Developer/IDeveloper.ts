@@ -6,5 +6,6 @@ interface IDeveloper {
   position: string;
   company: Company;
   skills: string[];
+  native?: boolean;
 }
 export default IDeveloper;

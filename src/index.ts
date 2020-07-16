@@ -1,5 +1,6 @@
 import Company from "./Developer/Company";
 import Developer from "./Developer/Developer";
+import MobileDeveloper from "./Developer/MobileDeveloper";
 let camelCase = new Company("camelCase", "Giza");
 let Moataz = new Developer("Moataz", 29, "PHP web developer", camelCase, [
   "HTML",
@@ -20,12 +21,14 @@ console.log(Moataz.hello());
 
 let orchtech = new Company("orchtech", "Giza");
 
-const abdo = new Developer("Abdo", 29, "Mobile Developer", orchtech, [
-  "HTML",
-  "CSS",
-  "JS",
-  "Android",
-]);
+const abdo = new MobileDeveloper(
+  "Abdo",
+  29,
+  "Mobile Developer",
+  orchtech,
+  ["HTML", "CSS", "JS", "Android"],
+  true
+);
 
 console.log(abdo.hello());
 
