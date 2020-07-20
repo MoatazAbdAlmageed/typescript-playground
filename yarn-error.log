@@ -2,7 +2,7 @@ Arguments:
   /usr/bin/node /usr/share/yarn/bin/yarn.js start:dev
 
 PATH: 
-  /opt/lampp/htdocs/playground/typescript/node_modules/.bin:/tmp/yarn--1594900144418-0.05773234200234256:/opt/lampp/htdocs/playground/typescript/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /opt/lampp/htdocs/playground/typescript/node_modules/.bin:/tmp/yarn--1594914668659-0.5812181178002787:/opt/lampp/htdocs/playground/typescript/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.21.1
