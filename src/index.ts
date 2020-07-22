@@ -6,7 +6,7 @@ let camelCase = new Company("camelCase", "Giza");
 let Moataz = new Developer(
   "Moataz",
   29,
-  DeveloperPositions.fullstack,
+  DeveloperPositions["Fullstack DEVELOPER"],
   camelCase,
   ["HTML", "CSS", "JS", "NodeJS", "MongoDb"]
 );
@@ -19,7 +19,7 @@ Moataz.age = 30;
 let wuilt = new Company("wuilt", "6 October");
 
 Moataz.setCompany(wuilt);
-Moataz.setPosition(DeveloperPositions.fullstack);
+Moataz.setPosition(DeveloperPositions["MERN DEVELOPER"]);
 console.log(Moataz.hello());
 wuilt.setEmployeesNumber(16);
 console.log("🚀🚀🚀🚀🚀🚀 wuilt.ownerAge");
@@ -34,7 +34,7 @@ let orchtech = new Company("orchtech", "Giza");
 const abdo = new MobileDeveloper(
   "Abdo",
   29,
-  DeveloperPositions.mobile,
+  DeveloperPositions["MERN DEVELOPER"],
   orchtech,
   ["HTML", "CSS", "JS", "Android"],
   true

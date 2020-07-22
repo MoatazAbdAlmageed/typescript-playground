@@ -1,6 +1,7 @@
 export enum DeveloperPositions {
-  "backend",
-  "frontEnd",
-  "fullstack",
-  "mobile",
+  "Backend DEVELOPER",
+  "FrontEnd DEVELOPER",
+  "Fullstack DEVELOPER",
+  "MERN DEVELOPER",
+  "Mobile DEVELOPER",
 }
