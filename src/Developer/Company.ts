@@ -1,12 +1,16 @@
 class Company {
-  name: string;
-  location?: string;
+  constructor(
+    public name: string,
+    public location?: string,
+    public employeesNumber?: number,
+    readonly ownerAge: number = 5
+  ) {}
 
-  constructor(name: string, location?: string) {
-    this.name = name;
-    if (location) {
-      this.location = location;
-    }
+  setEmployeesNumber(employeesNumber: number) {
+    this.employeesNumber = employeesNumber;
+  }
+  getEmployeesNumber() {
+    return this.employeesNumber;
   }
 }
 
