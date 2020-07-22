@@ -1,9 +1,5 @@
 class Car {
-  engine: string;
-
-  constructor(engine: string) {
-    this.engine = engine;
-  }
+  constructor(public engine: string) {}
 
   start() {
     console.log(`${this.engine} start`);

@@ -1,4 +1,6 @@
-class Company {
+import ICompany from "../interfaces/ICompany";
+
+class Company implements ICompany {
   constructor(
     public name: string,
     public location?: string,

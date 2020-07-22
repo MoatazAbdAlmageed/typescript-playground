@@ -1,11 +1,11 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add nodemon
+  /usr/bin/node /usr/share/yarn/bin/yarn.js start:dev
 
 PATH: 
-  /opt/lampp:/home/wuilt/gocode/bin:/home/wuilt/.config/composer/vendor/bin:.:/usr/local/heroku/bin:/opt/lampp:/home/wuilt/gocode/bin:/home/wuilt/.config/composer/vendor/bin:.:/usr/local/heroku/bin:/opt/lampp:/home/wuilt/gocode/bin:/home/wuilt/.config/composer/vendor/bin:.:/usr/local/heroku/bin:/opt/lampp:/home/wuilt/gocode/bin:/home/wuilt/.config/composer/vendor/bin:.:/usr/local/heroku/bin:/opt/lampp:/home/wuilt/gocode/bin:/home/wuilt/.config/composer/vendor/bin:.:/usr/local/heroku/bin:/home/wuilt/bin:/home/wuilt/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/wuilt/development/flutter/bin:/home/wuilt/development/flutter/bin:/home/wuilt/development/flutter/bin:/home/wuilt/development/flutter/bin:/home/wuilt/development/flutter/bin
+  /opt/lampp/htdocs/playground/typescript/node_modules/.bin:/tmp/yarn--1595414366693-0.9534766152321033:/opt/lampp/htdocs/playground/typescript/node_modules/.bin:/home/moataz/.config/yarn/link/node_modules/.bin:/home/moataz/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/gocode/bin:/home/moataz/.composer/vendor/bin:/home/moataz/.composer/vendor/bin:/home/moataz/bin:/home/moataz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
-  1.21.0
+  1.21.1
 
 Node version: 
   13.14.0
@@ -14,7 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  Error: ENOSPC: no space left on device, copyfile '/home/wuilt/.cache/yarn/v6/npm-typescript-3.9.6-8f3e0198a34c3ae17091b35571d3afd31999365a-integrity/node_modules/typescript/lib/tsserver.js' -> '/mnt/01D2CD15B7941BF0/htdocs/playground/typescript-playground/node_modules/typescript/lib/tsserver.js'
+  Error: EIO: i/o error, write
+      at writeSync (fs.js:692:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+      at writeOrBuffer (_stream_writable.js:378:12)
+      at SyncWriteStream.Writable.write (_stream_writable.js:314:12)
+      at ConsoleReporter._log (/usr/share/yarn/lib/cli.js:96691:17)
+      at ConsoleReporter.log (/usr/share/yarn/lib/cli.js:96679:10)
+      at ConsoleReporter.command (/usr/share/yarn/lib/cli.js:96708:10)
+      at /usr/share/yarn/lib/cli.js:34545:16
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
 
 npm manifest: 
   {
@@ -26,7 +36,7 @@ npm manifest:
       "minify": "jsmin -o build/index.min.js build/index.js",
       "minify-all": "minify-all build ",
       "start": "node build/index",
-      "build": "yarn minify && tsc",
+      "build": "yarn  tsc && yarn minify ",
       "start:dev": "yarn build && yarn start",
       "watch": "nodemon -e ts,json --exec yarn start:dev"
     },

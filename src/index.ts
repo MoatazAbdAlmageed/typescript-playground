@@ -1,14 +1,15 @@
-import Company from "./Developer/Company";
-import Developer from "./Developer/Developer";
-import MobileDeveloper from "./Developer/MobileDeveloper";
+import Company from "./classes/Company";
+import Developer from "./classes/Developer";
+import MobileDeveloper from "./classes/MobileDeveloper";
+import { DeveloperPositions } from "./enums/DeveloperPositions";
 let camelCase = new Company("camelCase", "Giza");
-let Moataz = new Developer("Moataz", 29, "PHP web developer", camelCase, [
-  "HTML",
-  "CSS",
-  "JS",
-  "NodeJS",
-  "MongoDb",
-]);
+let Moataz = new Developer(
+  "Moataz",
+  29,
+  DeveloperPositions.fullstack,
+  camelCase,
+  ["HTML", "CSS", "JS", "NodeJS", "MongoDb"]
+);
 console.log(Moataz.hello());
 camelCase.setEmployeesNumber(6);
 console.log(Moataz.company.getEmployeesNumber());
@@ -18,7 +19,7 @@ Moataz.age = 30;
 let wuilt = new Company("wuilt", "6 October");
 
 Moataz.setCompany(wuilt);
-Moataz.setPosition("MERN developer");
+Moataz.setPosition(DeveloperPositions.fullstack);
 console.log(Moataz.hello());
 wuilt.setEmployeesNumber(16);
 console.log("🚀🚀🚀🚀🚀🚀 wuilt.ownerAge");
@@ -33,7 +34,7 @@ let orchtech = new Company("orchtech", "Giza");
 const abdo = new MobileDeveloper(
   "Abdo",
   29,
-  "Mobile Developer",
+  DeveloperPositions.mobile,
   orchtech,
   ["HTML", "CSS", "JS", "Android"],
   true
