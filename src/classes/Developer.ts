@@ -29,7 +29,7 @@ export default class Developer implements IDeveloper {
   }
 
   getPosition() {
-    return `I'm  working as ${this.position}`;
+    return `I'm  working as ${DeveloperPositions[this.position]}`;
   }
 
   setPosition(position: DeveloperPositions) {
