@@ -7,7 +7,7 @@
     "minify": "jsmin -o build/index.min.js build/index.js",
     "minify-all": "minify-all build ",
     "start": "node build/index",
-    "build": "yarn minify && tsc",
+    "build": "yarn  tsc && yarn minify ",
     "start:dev": "yarn build && yarn start",
     "watch": "nodemon -e ts,json --exec yarn start:dev"
   },
