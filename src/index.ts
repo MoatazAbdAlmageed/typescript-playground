@@ -69,3 +69,9 @@ console.log("🚀🚀🚀🚀🚀🚀 objectAnyData");
 console.log(objectAnyData);
 console.log("----------------------------------------------------");
 console.log();
+
+let employee: [number, string, number] = [1, "Moataz", 1];
+console.log("🚀🚀🚀🚀🚀🚀 employee");
+console.log(employee);
+console.log("----------------------------------------------------");
+console.log();
